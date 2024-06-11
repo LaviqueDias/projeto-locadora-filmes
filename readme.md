@@ -1,1 +1,1 @@
-Projeto de uma locadora utilizando Python e mySQL
+Projeto de uma locadora de filmes utilizando Python e mySQL

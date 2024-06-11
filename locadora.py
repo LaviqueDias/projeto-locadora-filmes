@@ -38,9 +38,13 @@ while opcao != 6:
 
         filmes = listarBancoDados(conexao, sql_select)
 
-        print('\nLista de Filmes: ')
-        for filme in filmes:
-            print('\nCódigo: %d\nNome: %s\nAutor: %s\nDiretor: %s\nCategoria: %s\n' % (filme[0], filme[1], filme[2], filme[3], filme[4]))
+        if len(filmes) != 0:
+            print('\nLista de Filmes: ')
+            for filme in filmes:
+                print('\nCódigo: %d\nNome: %s\nAutor: %s\nDiretor: %s\nCategoria: %s\n' % (filme[0], filme[1], filme[2], filme[3], filme[4]))
+        
+        else:
+            print('Não há filmes cadastrados na locadora!')
 
     elif opcao == 2:
         categoria = input('Digite a categoria que deseja listar: ')
@@ -49,10 +53,13 @@ while opcao != 6:
 
         filmes = listarBancoDados(conexao, sql_select)
 
-        print('\nLista de filmes da categoria %s' % (categoria))
-        for filme in filmes:
-            print('\nCódigo: %d\nNome: %s\nAutor: %s\nDiretor: %s\nCategoria: %s\n' % (filme[0], filme[1], filme[2], filme[3], filme[4]))
-            
+        if len(filmes) != 0:
+            print('\nLista de filmes da categoria %s' % (categoria))
+            for filme in filmes:
+                print('\nCódigo: %d\nNome: %s\nAutor: %s\nDiretor: %s\nCategoria: %s\n' % (filme[0], filme[1], filme[2], filme[3], filme[4]))
+        
+        else:
+            print('Não há filmes cadastrados dessa categoria!')
 
     elif opcao == 3:
         codigo = int(input('\nDigite o código do filme: '))
@@ -65,6 +72,7 @@ while opcao != 6:
             print('\nFilme do código %d encontrado!' % (codigo))
             for filme in filmes:
                 print('\nCódigo: %d\nNome: %s\nAutor: %s\nDiretor: %s\nCategoria: %s\n' % (filme[0], filme[1], filme[2], filme[3], filme[4]))
+        
         else:
             print('\nFilme não encontrado!')
     

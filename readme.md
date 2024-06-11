@@ -1,0 +1,1 @@
+Projeto de uma locadora utilizando Python e mySQL

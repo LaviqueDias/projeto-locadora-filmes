@@ -1,7 +1,7 @@
 import mysql.connector
 from operacoesbd import *
 
-conexao = criarConexaoInicial('localhost', 'root', 'admin')
+conexao = criarConexaoInicial('endereco', 'usuario', 'senha')
 
 criarBancoDados(conexao, 'locadora')
 

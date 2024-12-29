@@ -28,3 +28,4 @@ Antes de executar o projeto, certifique-se de ter o seguinte instalado:
    Instale as dependências usando o seguinte comando:
    ```bash
    pip install mysql-connector-python
+4. Substitua as variáveis "endereco", "usuario", e "senha" da linha 4 do arquivo "locadora.py" pelas suas credenciais do banco de dados.
